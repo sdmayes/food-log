@@ -1,3 +1,7 @@
+<% 
+  #Define our styles
+%>
+
 <p id="notice"><%= notice %></p>
 
 <h1 class="text-6xl mb-6">Entries</h1>
@@ -16,7 +20,7 @@
 
   <tbody>
     <% @entries.each do |entry| %>
-      <tr>
+      <tr class="flex">
         <td class="mr-4"><%= entry.meal_type %></td>
         <td class="mr-4"><%= entry.calories %></td>
         <td class="mr-4"><%= entry.carbs %></td>

@@ -1,3 +1,10 @@
+<% 
+  # Define our styles
+  label_style = "text-xl font-normal mb-1"
+  input_style = "border border-gray-900 h-8 rounded-sm"
+  button = "px-5 py-3 bg-limegreen-400 text-gray-900 font-bold text-xl rounded-sm shadow mt-6" 
+%>
+
 <%= form_with(model: entry) do |form| %>
   <% if entry.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +19,31 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :meal_type %>
-    <%= form.text_field :meal_type %>
+    <%= form.label :meal_type, class: label_style %>
+    <%= form.text_field :meal_type, class: input_style %>
   </div>
 
   <div class="field">
-    <%= form.label :calories %>
-    <%= form.text_field :calories %>
+    <%= form.label :calories, class: label_style %>
+    <%= form.text_field :calories, class: input_style %>
   </div>
 
   <div class="field">
-    <%= form.label :carbs %>
-    <%= form.text_field :carbs %>
+    <%= form.label :carbs, class: label_style %>
+    <%= form.text_field :carbs, class: input_style %>
   </div>
 
   <div class="field">
-    <%= form.label :protein %>
-    <%= form.text_field :protein %>
+    <%= form.label :protein, class: label_style %>
+    <%= form.text_field :protein, class: input_style %>
   </div>
 
   <div class="field">
-    <%= form.label :fats %>
-    <%= form.text_field :fats %>
+    <%= form.label :fats, class: label_style %>
+    <%= form.text_field :fats, class: input_style %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: button%>
   </div>
 <% end %>
