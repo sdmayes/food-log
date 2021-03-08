@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Entries</h1>
+<h1 class="text-6xl mb-6">Entries</h1>
 
 <table>
   <thead>
-    <tr>
-      <th>Meal type</th>
-      <th>Calories</th>
-      <th>Carbs</th>
-      <th>Protein</th>
-      <th>Fats</th>
+    <tr class="flex">
+      <th class="mr-4">Meal type</th>
+      <th class="mr-4">Calories</th>
+      <th class="mr-4">Carbs</th>
+      <th class="mr-4">Protein</th>
+      <th >Fats</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,12 +17,12 @@
   <tbody>
     <% @entries.each do |entry| %>
       <tr>
-        <td><%= entry.meal_type %></td>
-        <td><%= entry.calories %></td>
-        <td><%= entry.carbs %></td>
-        <td><%= entry.protein %></td>
-        <td><%= entry.fats %></td>
-        <td><%= link_to 'Show', entry %></td>
+        <td class="mr-4"><%= entry.meal_type %></td>
+        <td class="mr-4"><%= entry.calories %></td>
+        <td class="mr-4"><%= entry.carbs %></td>
+        <td class="mr-4"><%= entry.protein %></td>
+        <td class="mr-4"><%= entry.fats %></td>
+        <td class="mr-4"><%= link_to 'Show', entry %></td>
         <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
         <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
